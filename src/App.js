@@ -6,7 +6,10 @@ import AddTodoComponent from "./Components/AddTodo";
 
 class App extends Component {
   state = {
-    tasks: ["Task #1", "Task #2", "Task #3", "Task #4", "Task #5"],
+    tasks: [
+      "Press the '+' button to add more tasks.",
+      "Douple tap a task to delete a task.",
+    ],
   };
 
   deleteTask = (index) => {
