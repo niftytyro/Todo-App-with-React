@@ -11,3 +11,8 @@ li.todo-item {
   margin: 0.5rem;
   text-align: left;
 }
+li.todo-item:hover {
+  background: #dddddd;
+  cursor: pointer;
+  user-select: none;
+}
