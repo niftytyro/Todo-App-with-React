@@ -1,11 +1,16 @@
 ul.todos-list {
   list-style-type: none;
+  margin-bottom: 2rem;
 }
 
 li.todo-item {
   font-size: 1.5rem;
   color: #222222;
-  padding: 0.75rem 1rem;
+  padding: 0 1rem;
+  height: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   border: 1px solid #cccccc;
   border-radius: 5px;
   margin: 0.5rem;

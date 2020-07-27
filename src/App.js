@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import HeaderComponent from "./Components/HeaderComponent";
 import TodosComponent from "./Components/Todos";
+import AddTodoComponent from "./Components/AddTodo";
 
 class App extends Component {
   state = {
@@ -15,17 +16,22 @@ class App extends Component {
       tasks: tasks,
     });
   };
+  addTask = () => {
+    const tasks = [...this.state.tasks];
+    tasks.push("");
+    this.setState({
+      tasks: tasks,
+    });
+  };
 
   render() {
     let todosList = [...this.state.tasks];
     return (
       <div className="App">
-        <HeaderComponent></HeaderComponent>
+        <HeaderComponent />
         <div className="todo-container">
-          <TodosComponent
-            onTap={this.deleteTask}
-            todosList={todosList}
-          ></TodosComponent>
+          <TodosComponent onTap={this.deleteTask} todosList={todosList} />
+          <AddTodoComponent onTap={this.addTask} />
         </div>
       </div>
     );
