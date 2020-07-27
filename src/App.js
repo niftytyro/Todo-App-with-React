@@ -23,6 +23,11 @@ class App extends Component {
       tasks: tasks,
     });
   };
+  onTaskChange = (index, newTask) => {
+    const tasks = [...this.state.tasks];
+    tasks[index] = newTask;
+    this.setState({ tasks: tasks });
+  };
 
   render() {
     let todosList = [...this.state.tasks];
@@ -30,7 +35,11 @@ class App extends Component {
       <div className="App">
         <HeaderComponent />
         <div className="todo-container">
-          <TodosComponent onTap={this.deleteTask} todosList={todosList} />
+          <TodosComponent
+            onTap={this.deleteTask}
+            onChange={this.onTaskChange}
+            todosList={todosList}
+          />
           <AddTodoComponent onTap={this.addTask} />
         </div>
       </div>

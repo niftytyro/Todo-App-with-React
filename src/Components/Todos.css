@@ -19,5 +19,16 @@ li.todo-item {
 li.todo-item:hover {
   background: #dddddd;
   cursor: pointer;
+}
+li.todo-item input {
+  height: 100%;
+  background: transparent;
+  border: none;
+  font-size: 100%;
+  user-select: none;
+}
+li.todo-item input:focus {
+  border: none;
+  outline: none;
   user-select: none;
 }
