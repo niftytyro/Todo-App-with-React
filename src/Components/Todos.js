@@ -2,26 +2,26 @@ import React, { useState } from "react";
 import "./Todos.css";
 
 const todos = (props) => {
-  const [clicked, setClicked] = useState(false);
-  const duration = 500;
-  let timer;
+  // const [clicked, setClicked] = useState(false);
+  // const duration = 500;
+  // let timer;
 
-  const handleTap = (index) => {
-    if (clicked) {
-      setClicked(false);
-      clearTimeout(timer);
-      handleDoubleTap(index);
-    } else {
-      setClicked(true);
-      timer = setTimeout(() => {
-        setClicked(false);
-      }, duration);
-    }
-  };
+  // const handleTap = (index) => {
+  //   if (clicked) {
+  //     setClicked(false);
+  //     clearTimeout(timer);
+  //     handleDoubleTap(index);
+  //   } else {
+  //     setClicked(true);
+  //     timer = setTimeout(() => {
+  //       setClicked(false);
+  //     }, duration);
+  //   }
+  // };
 
-  const handleDoubleTap = (index) => {
-    props.onTap(index);
-  };
+  // const handleDoubleTap = (index) => {
+  //   props.onTap(index);
+  // };
 
   var todosList = props.todosList.map((value, index) => {
     return (
@@ -30,7 +30,7 @@ const todos = (props) => {
           props.onTap(index);
           event.preventDefault();
         }}
-        onTap={handleTap(index)}
+        // onTap={handleTap(index)}
         className="todo-item"
         key={index}
       >
